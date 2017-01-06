@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="animal_table">
     <% @animals.each do |animal| %>
       <tr>
         <td><%= animal.common_name %></td>
@@ -25,6 +25,12 @@
     <% end %>
   </tbody>
 </table>
+<hr>
+<input type="text" name="animal[common_name]" placeholder="Common Name" id="animal_common_name"/>
+<input type="text" name="animal[latin_name]" placeholder="Latin Name" id="animal_latin_name"/>
+<input type="text" name="animal[kingdom]" placeholder="Kingdom" id="animal_kingdom"/>
+<button id="create_animal">Create</button>
+<hr>
 
 <br>
 
